@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio – Priscila Mota</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+        </nav>
+    </header>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="sobre-container">
+
+            <img src="img/mota-convertido-de-png.webp" class="perfil" alt="Foto perfil">
+
+            <div class="texto">
+                <h2>Olá, eu sou <span>Priscila Mota</span></h2>
+
+                <p>
+                    Gosto de transformar ideias em experiências digitais que façam sentido para as pessoas. 
+                    Hoje estudo Análise e Desenvolvimento de Sistemas, onde descobri que tecnologia é menos
+                    sobre máquinas e mais sobre gente: seus ritmos, seus limites e a forma como interagem com o mundo.
+                </p>
+                <p>
+                     Cada projeto se torna um pequeno laboratório onde busco aprender, testar e evoluir.
+                    Sigo construindo esse caminho com curiosidade, disciplina e vontade de fazer produtos que realmente ajudem alguém do outro lado da tela.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projetos">
+
+        <h2>Projetos</h2>
+
+        <!-- Projeto 1 -->
+        <div class="card-projeto">
+            <img src="IMG/homin + 1.png" alt="Projeto Homin+">
+
+            <div class="conteudo">
+                <h3>HOMIN+</h3>
+                <p>
+                    O objetivo é criar uma plataforma que incentive o cuidado preventivo, fornecendo
+                    informações verificadas por especialistas e suporte inteligente por meio de IA integrada.
+                    A aplicação utiliza React.js no front-end, priorizando acessibilidade e usabilidade, e FastAPI (Python) no back-end, garantindo desempenho e escalabilidade. A arquitetura integra LangChain, Agno, ChromaDB e OpenAI API, formando um sistema de IA baseado em RAG (Retrieval-Augmented Generation) que combina busca vetorial local com consulta em fontes confiáveis da web.O banco de dados é híbrido, com SQL relacional para usuários e logs, e ChromaDB para embeddings semânticos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="card-projeto invertido">
+            <img src="IMG/Thogether.png"Thogether app">
+
+            <div class="conteudo">
+                <h3>Thogether</h3>
+                <p>
+                    O Thogether é um aplicativo mobile criado para ajudar casais a se desconectarem
+                    do celular e se reconectarem entre si.
+                </p>
+                <p>
+                    Como funciona? O app bloqueia o uso do telefone e sugere jogos e atividades
+                    para fazerem juntos, incentivando momentos reais de conexão.
+                </p>
+            </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="card-projeto">
+            <img src="IMG/ideal xp.png" alt="Ideal XP">
+
+            <div class="conteudo">
+                <h3>Ideal XP</h3>
+                <p>
+                    Plataforma de gamificação com perfis de aluno, sistema de pontos (XP) e conquistas.
+                    Desenvolvido par aum Colégio de Ensino Médio
+                    Cria missões e ranking para incentivar o engajamento dos alunos.
+                    Criar missões claras e recompensadoras que incentivem o uso da biblioteca, a participação 
+                    em monitorias e a entrega pontual de trabalhos.
+               
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <h2>Habilidades</h2>
+
+        <div class="grid-hab">
+            <img src="IMG/figma.png">
+            <img src="IMG/react.png">
+            <img src="IMG/nodejs.png">
+            <img src="IMG/python.png">
+            <img src="IMG/html-5.png">
+            <img src="IMG/java.png">
+            <img src="IMG/css-3.png">
+            <img src="IMG/script-java.png">
+            <img src="IMG/ps.png">
+            <img src="IMG/github.png">
+        </div>
+    </section>
+
+ <!-- Contato -->
+<footer class="contato">
+    <h2>Contato</h2>
+
+    <div class="redes">
+        <a href="https://instagram.com/dev.prii" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@dev.prii</span>
+        </a>
+
+
+        <a href="mailto:pris.mota12@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+            <span>pris.mota12@gmail.com</span>
+        </a>
+    </div>
+
+    <span class="creditos">Priscila Sousa Mota — 2025 ©</span>
+</footer>
+
+
+<!-- Importar Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+    const cards = document.querySelectorAll('.card-projeto');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+</script>
